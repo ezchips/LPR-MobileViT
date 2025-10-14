@@ -1,0 +1,31 @@
+
+# configs/base.yaml
+# Shared defaults (model size, input shape, train/val settings).
+input_height: 128
+input_width: 256
+in_channels: 3
+
+train:
+  batch_size: 128
+  epochs: 150
+  amp: true
+  lr: 5.0e-4
+  weight_decay: 0.01
+  num_workers: 8
+  ckpt_every: 5
+
+eval:
+  batch_size: 256
+  num_workers: 8
+
+model:
+  patch: 2
+  channels: [64, 80, 96]
+  dims:     [96, 120, 144]
+  depths:   [2, 4, 3]
+  expand: 4
+
+multipath:
+  hidden_dim: 512
+  dropout: 0.10
+  fmt_hidden: 256

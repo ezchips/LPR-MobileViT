@@ -1,0 +1,45 @@
+
+# Multi-template config covering NY/NJ formats + generic patterns.
+inherits: base.yaml
+
+separators: ["-", "•", "·", " "]
+
+aliases:
+  LETTERS: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  DIGITS:  "0123456789"
+
+templates:
+  - id: ny_legacy7
+    pattern: "LLL-####"
+    charsets: ["ABCDEFGHIJKLMNOPQRSTUVWXYZ","ABCDEFGHIJKLMNOPQRSTUVWXYZ","ABCDEFGHIJKLMNOPQRSTUVWXYZ","0123456789","0123456789","0123456789","0123456789"]
+
+train:
+  epochs: 300
+  batch_size: 64
+  amp: true
+  lr: 5.0e-4
+  weight_decay: 0.01
+  lambda_fmt: 0.25
+  balance_templates: true
+  ckpt_every: 1
+
+eval:
+  batch_size: 4
+  num_workers: 2
+  amp: true
+
+model:
+  in_h: 128
+  in_w: 256
+  patch: 2       # MobileViT patch=h=w=2 (keep!)
+
+augment:
+  blur_prob: 0.30
+  motion_blur_prob: 0.20
+  perspective_prob: 0.25   # small random tilt/keystone
+  brightness: [0.75, 1.25]
+  contrast:   [0.75, 1.25]
+
+input:
+  mean: [0.465, 0.467, 0.518]
+  std: [0.234, 0.237, 0.228]
