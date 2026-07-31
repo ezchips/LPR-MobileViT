@@ -175,6 +175,8 @@ Outputs include `text_raw` (no separators), `text` (with separators inserted fro
 
 ## License / Acknowledgements
 
+This project is released under the MIT License. It is provided to encourage research, education, and community collaboration in AI-powered residential security systems.
+
 Code structure and training/eval approach are inspired by:
 - **MultiPath ViT OCR** (ICCKE 2022) – see the architecture and results tables for context.
 - **MobileViT** (ICLR 2022) – see block diagram and mobile performance notes.
