@@ -131,7 +131,7 @@ python evaluate.py \
 
 ### Robust decode (multi‑template only)
 For challenging data, you can enable more robust decoding via optional flags (they are **no‑ops unless provided**):  
-`--topk_templates`, `--conf_gate`, `--gap_delta`, `--beam`, `--char_topk`. These are passed into the model’s `decode(...)` and char‑level re‑scoring utilities. fileciteturn0file0
+`--topk_templates`, `--conf_gate`, `--gap_delta`, `--beam`, `--char_topk`. These are passed into the model’s `decode(...)` and char‑level re‑scoring utilities.
 
 Example:
 
