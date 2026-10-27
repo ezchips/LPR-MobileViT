@@ -1,3 +1,4 @@
+<img width="1749" height="742" alt="mp-mvit-ocr" src="https://github.com/user-attachments/assets/5bbbb22d-3572-40c3-812f-6c55aef22f32" />
 
 # LPR‑MobileViT
 
